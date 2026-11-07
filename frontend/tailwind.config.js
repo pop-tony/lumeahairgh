@@ -4,11 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        beige: { DEFAULT: "#F7F1E6", 300: "#EDE3D0" },
+        forestDeep: "#0B2E1F",
+        forestMid: "#1B4D3A",
+        moss: "#7A9B7E",
+        sage: "#A8C3A0",
         gold: "#C6A46A",
         goldDeep: "#B8924F",
-        blackSoft: "#0A0A0A",
-        charcoal: "#1A1A18"
+        beige: "#F7F1E6",
+        ivory: "#FAF8F3"
       },
       fontFamily: { bernina: ['"Bernina Sans"', 'Sora', 'sans-serif'] }
     }

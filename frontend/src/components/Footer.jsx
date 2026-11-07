@@ -19,7 +19,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 mt-8 lg:mt-16 bg-[#1A1A18] text-[#F7F1E6] pb-24 md:pb-0">
+    <footer className="relative z-10 mt-8 lg:mt-16 border-t border-gold/20 bg-forestDeep text-beige pb-24 md:pb-0">
       <div className="max-w-[1280px] mx-auto px-5 lg:px-8 py-10 lg:py-14 flex flex-col lg:flex-row items-center justify-between gap-8">
         <div className="text-center lg:text-left">
           <div className="text-[16px] lg:text-[18px] tracking-[-0.02em]">LUMEAHAIRGH Hair Studio East Legon Accra Ghana</div>
@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
         <div className="flex items-center gap-3">
           {socialLinks.map(({ label, path }) => (
-            <a key={label} href="#" aria-label={label} className="w-11 h-11 rounded-full flex items-center justify-center bg-[var(--gold)] hover:scale-110 transition">
+            <a key={label} href="#" aria-label={label} className="w-11 h-11 rounded-full flex items-center justify-center bg-gold hover:bg-goldDeep hover:scale-110 transition">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true">
                 <path d={path} />
               </svg>

@@ -24,7 +24,7 @@ export default function Collections() {
           </Link>
         ))}
       </div>
-      <div className="mt-16 rounded-[2rem] bg-charcoal p-8 text-beige md:flex md:items-center md:justify-between">
+      <div className="mt-16 rounded-[2rem] bg-forestDeep p-8 text-beige md:flex md:items-center md:justify-between">
         <div>
           <h2 className="text-3xl font-bold italic">Find Your Signature Look</h2>
           <p className="mt-2 opacity-70">Book a personal fitting with our Accra studio.</p>

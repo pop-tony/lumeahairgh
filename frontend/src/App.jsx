@@ -26,12 +26,12 @@ export default function App() {
   }, [location.pathname])
 
   return (
-    <div className="min-h-screen w-full overflow-x-clip relative" style={{ background: 'radial-gradient(120% 120% at 50% 0%, #FFFEFA 0%, var(--bg) 58%, #EFE2CC 100%)', color: 'var(--text)', boxSizing: 'border-box' }}>
+    <div className="min-h-screen w-full overflow-x-clip relative bg-beige text-forestDeep" style={{ background: 'var(--bg)', color: 'var(--text)', boxSizing: 'border-box' }}>
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute w-[420px] h-[420px] rounded-full blur-[100px] opacity-25" style={{ background: 'var(--gold)', top: '4%', right: '2%' }} />
-        <div className="absolute w-[340px] h-[340px] rounded-full blur-[80px] opacity-20" style={{ background: 'var(--goldDeep)', bottom: '10%', left: '2%' }} />
-        <div className="absolute w-[180px] h-[180px] rounded-full opacity-20" style={{ background: 'radial-gradient(circle at 30% 30%, #FFF8E8, #C6A46A)', top: '18%', left: '6%', animation: 'floatA 6s ease-in-out infinite' }} />
-        <div className="absolute w-[90px] h-[90px] rounded-full opacity-25" style={{ background: 'radial-gradient(circle at 30% 30%, #FFF8E8, #C6A46A)', top: '62%', right: '9%', animation: 'floatB 5s ease-in-out infinite' }} />
+        <div className="ambient-orb ambient-orb-gold absolute w-[420px] h-[420px] rounded-full blur-[100px] opacity-25" style={{ background: 'var(--gold)', top: '4%', right: '2%' }} />
+        <div className="ambient-orb ambient-orb-forest absolute w-[340px] h-[340px] rounded-full blur-[80px] opacity-25" style={{ background: 'var(--forest-mid)', bottom: '10%', left: '2%' }} />
+        <div className="absolute w-[180px] h-[180px] rounded-full opacity-20" style={{ background: 'radial-gradient(circle at 30% 30%, #FAF8F3, #C6A46A)', top: '18%', left: '6%', animation: 'floatA 6s ease-in-out infinite' }} />
+        <div className="absolute w-[90px] h-[90px] rounded-full opacity-25" style={{ background: 'radial-gradient(circle at 30% 30%, #FAF8F3, #C6A46A)', top: '62%', right: '9%', animation: 'floatB 5s ease-in-out infinite' }} />
         <div className="absolute w-[14px] h-[14px] rounded-full bg-[var(--gold)] opacity-30" style={{ top: '22%', left: '48%', animation: 'floatB 4s ease-in-out infinite' }} />
         <div className="absolute w-[10px] h-[10px] rounded-full bg-[var(--goldDeep)] opacity-30" style={{ top: '55%', left: '18%', animation: 'floatA 5s ease-in-out infinite' }} />
         <div className="absolute w-[8px] h-[8px] rounded-full bg-[var(--gold)] opacity-30" style={{ top: '78%', right: '22%', animation: 'floatB 6s ease-in-out infinite' }} />
@@ -48,7 +48,7 @@ export default function App() {
       </Routes>
       <Footer />
       <nav aria-label="Quick navigation" className="md:hidden fixed bottom-0 left-0 right-0 z-30 p-3" style={{ paddingBottom: 'max(12px, env(safe-area-inset-bottom, 12px))' }}>
-        <div className="mx-auto max-w-[380px] rounded-full px-2 py-2 flex items-center justify-between" style={{ background: 'rgba(26, 26, 24, 0.92)', backdropFilter: 'blur(24px)', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.25)' }}>
+        <div className="mx-auto max-w-[380px] rounded-full px-2 py-2 flex items-center justify-between bg-forestDeep/90 text-beige" style={{ backdropFilter: 'blur(24px)', boxShadow: '0 10px 40px rgba(11, 46, 31, 0.25)' }}>
           {quickLinks.map(([to, label]) => {
             const active = location.pathname === to
             return (

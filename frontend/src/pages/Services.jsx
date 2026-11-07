@@ -14,12 +14,12 @@ export default function Services() {
     <main className="services-page mx-auto max-w-7xl px-6 py-16">
       <section className="services-hero relative overflow-hidden rounded-[2rem] p-8 text-white md:p-14">
         <div className="relative z-10 max-w-2xl">
-          <p className="font-bold italic tracking-widest text-[#F2C98A]">MADE FOR YOUR MOMENT</p>
+          <p className="font-bold italic tracking-widest text-gold">MADE FOR YOUR MOMENT</p>
           <h1 className="mt-3 text-5xl font-bold italic md:text-7xl">Your Hair, Your Moment</h1>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/85">
             Thoughtful hair care and styling, tailored to bring your vision to life.
           </p>
-          <Link to="/booking" className="mt-7 inline-flex min-h-12 items-center rounded-full bg-[#F2C98A] px-7 py-4 font-bold italic text-[#301C25] transition hover:bg-white">
+          <Link to="/booking" className="mt-7 inline-flex min-h-12 items-center rounded-full bg-gold px-7 py-4 font-bold italic text-forestDeep transition hover:bg-ivory">
             Find Your Style
           </Link>
         </div>

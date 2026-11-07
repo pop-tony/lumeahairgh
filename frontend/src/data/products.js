@@ -5,7 +5,7 @@ export const products = [
     price: 'GHS 1850',
     image: '/images/wig-front.webp',
     lifestyleImage: '/images/hair-curls.jpg',
-    accent: 'berry',
+    accent: 'gold',
     description: 'A sleek, polished finish with soft movement for everyday elegance and special occasions.',
   },
   {
@@ -14,7 +14,7 @@ export const products = [
     price: 'GHS 1650',
     image: '/images/hair-editorial.jpg',
     lifestyleImage: '/images/braids-portrait.jpg',
-    accent: 'teal',
+    accent: 'gold',
     description: 'Soft, flowing waves bring effortless volume and a graceful finish to your look.',
   },
   {
@@ -23,7 +23,7 @@ export const products = [
     price: 'GHS 1420',
     image: '/images/hair-curls.jpg',
     lifestyleImage: '/images/sleek-ponytail.jpg',
-    accent: 'coral',
+    accent: 'gold',
     description: 'Defined curls with plenty of bounce, designed to make a statement from day to night.',
   },
   {
@@ -32,7 +32,7 @@ export const products = [
     price: 'GHS 1100',
     image: '/images/image_20261103_122647.webp',
     lifestyleImage: '/images/hair-curls.jpg',
-    accent: 'berry',
+    accent: 'gold',
     description: 'A versatile style with a natural looking hairline and a comfortable, secure fit.',
   },
   {
@@ -41,7 +41,7 @@ export const products = [
     price: 'GHS 700',
     image: '/images/braids-portrait.jpg',
     lifestyleImage: '/images/braids-portrait.jpg',
-    accent: 'teal',
+    accent: 'gold',
     description: 'Neat, lightweight braids finished with care for a confident protective style.',
   },
   {
@@ -50,7 +50,7 @@ export const products = [
     price: 'GHS 1500',
     image: '/images/hair-editorial.jpg',
     lifestyleImage: '/images/sleek-ponytail.jpg',
-    accent: 'coral',
+    accent: 'gold',
     description: 'A bespoke occasion look, thoughtfully styled to complement your special day.',
   },
 ]

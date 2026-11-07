@@ -22,7 +22,7 @@ export default function ProductDetail() {
       <Link to="/collections" className="inline-flex min-h-11 items-center gap-2 text-sm text-[var(--muted)]">← Back to Collections</Link>
       <section className="mt-6 grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
         <div className="product-photo-panel relative overflow-hidden rounded-[32px] p-5 md:p-8">
-          <div className="absolute -left-10 top-8 h-40 w-40 rounded-full bg-[var(--berry)] opacity-20 blur-3xl" />
+          <div className="absolute -left-10 top-8 h-40 w-40 rounded-full bg-forestMid opacity-20 blur-3xl" />
           <img src={product.image} alt={product.name} className="relative z-10 aspect-[0.88] w-full rounded-[24px] object-cover" />
           <div className="absolute bottom-8 right-8 z-20 overflow-hidden rounded-[24px] border-4 border-white shadow-2xl md:bottom-10 md:right-10">
             <img src={product.lifestyleImage} alt="Hair style worn by a model" className="h-36 w-28 object-cover md:h-48 md:w-36" />

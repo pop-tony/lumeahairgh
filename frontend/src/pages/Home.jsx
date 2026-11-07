@@ -72,8 +72,10 @@ export default function Home() {
   return (
     <main className="relative z-10 max-w-[1280px] mx-auto px-5 lg:px-8 py-6 lg:py-10 overflow-x-clip pb-28 md:pb-8">
       <div className="page-enter">
-        <section className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[86vh]">
-          <div className="space-y-6 lg:space-y-8 order-1">
+        <section className="relative grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[86vh] bg-beige">
+          <div className="hero-orb hero-orb-forest pointer-events-none absolute top-20 right-20 w-96 h-96 rounded-full bg-forestMid/10 blur-[80px]" />
+          <div className="hero-orb hero-orb-gold pointer-events-none absolute bottom-20 left-20 w-80 h-80 rounded-full bg-gold/10 blur-[80px]" />
+          <div className="relative z-10 space-y-6 lg:space-y-8 order-1">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-[11px] tracking-[0.2em] uppercase" style={{ color: 'var(--gold)' }}>
               <span className="w-2 h-2 rounded-full bg-[var(--gold)] animate-pulse" />
               New Collection Live
@@ -106,11 +108,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-visual relative w-full aspect-[0.95] lg:aspect-[1] flex items-center justify-center order-2 lg:sticky lg:top-[92px] hero-no-border" style={{ perspective: '1200px', perspectiveOrigin: '50% 50%' }}>
+          <div className="hero-visual relative z-10 w-full aspect-[0.95] lg:aspect-[1] flex items-center justify-center order-2 lg:sticky lg:top-[92px] hero-no-border" style={{ perspective: '1200px', perspectiveOrigin: '50% 50%' }}>
             <div className="hero-visual-glow absolute inset-[8%] rounded-full pointer-events-none" />
             <div className="relative w-full h-full flex items-center justify-center hero-no-border">
               <div ref={heroSpin} className="relative w-[92%] lg:w-[88%] aspect-[0.9] flex items-center justify-center hero-no-border select-none" style={{ transform: 'rotateY(0deg)', transformStyle: 'preserve-3d', willChange: 'transform' }}>
-                <img src={heroImage} alt="Braided hair style by LUMEAHAIRGH" className="w-full h-full object-cover rounded-[2rem]" style={{ border: 'none', outline: 'none', boxShadow: '0 30px 80px rgba(198,164,106,0.25)' }} />
+                <img src={heroImage} alt="Braided hair style by LUMEAHAIRGH" className="w-full h-full object-cover rounded-[2rem]" style={{ border: 'none', outline: 'none', boxShadow: '0 30px 80px rgba(11,46,31,0.25)' }} />
                 <div className="absolute bottom-[2%] left-1/2 w-[58%] h-[14%] rounded-full blur-[22px] opacity-35 pointer-events-none" style={{ background: 'var(--gold)' }} />
               </div>
             </div>
@@ -141,12 +143,12 @@ export default function Home() {
               View All Collections →
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 lg:gap-6">
-            {products.map((product) => (
-              <Link key={product.id} to={`/collections/${product.id}`} data-reveal="true" onMouseMove={tiltCard} onMouseLeave={resetTilt} className="group tilt-card cursor-pointer glass rounded-[24px] lg:rounded-[28px] overflow-hidden gold-glow min-h-[44px]" style={{ transformStyle: 'preserve-3d' }}>
-                <div className="aspect-[1] sm:aspect-[0.9] overflow-hidden relative">
-                  <img src={product.image} alt={product.name} className="w-full h-full object-cover scale-[1.05] group-hover:scale-[1.12] transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-60" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
+            {products.slice(0, 2).map((product) => (
+              <Link key={product.id} to={`/collections/${product.id}`} data-reveal="true" onMouseMove={tiltCard} onMouseLeave={resetTilt} className="product-card group tilt-card cursor-pointer rounded-[24px] lg:rounded-[28px] overflow-hidden min-h-[44px]" style={{ transformStyle: 'preserve-3d' }}>
+                <div className="product-card-media aspect-[1] sm:aspect-[0.9] overflow-hidden relative">
+                  <img src={product.image} alt={product.name} className="product-card-image w-full h-full object-cover scale-[1.05] group-hover:scale-[1.12] transition-transform duration-700" />
+                  <div className="product-card-shade absolute inset-0" />
                   <div className="absolute top-4 left-4 rounded-full px-3 py-1.5 text-[10px] tracking-[0.15em] uppercase text-white" style={{ background: `var(--${product.accent})` }}>{product.price}</div>
                   <img src={product.lifestyleImage} alt="" className="absolute bottom-4 right-4 h-16 w-16 rounded-full border-[3px] border-white object-cover shadow-xl transition-transform duration-500 group-hover:scale-110 sm:h-20 sm:w-20" />
                 </div>
@@ -162,7 +164,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-16 grid items-center gap-8 lg:mt-28 lg:grid-cols-2 lg:gap-14">
+        <section className="home-why-section mt-16 grid items-center gap-8 lg:mt-28 lg:grid-cols-2 lg:gap-14 bg-forestDeep text-beige">
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               <img src="/images/braids-portrait.jpg" alt="Braided style by LUMEAHAIRGH" className="w-full h-[320px] object-cover rounded-[24px] gold-glow" />
@@ -177,12 +179,12 @@ export default function Home() {
           <div>
             <div className="inline-flex glass rounded-full px-4 py-1.5 text-[10px] tracking-[0.2em] uppercase mb-4">Why LUMEAHAIRGH</div>
             <h2 className="text-[32px] lg:text-[54px] leading-[0.9] tracking-[-0.03em]">Luxury That Feels<br />Like Your Own</h2>
-            <p className="mt-5 text-[15px] leading-[1.7]" style={{ color: 'var(--muted)', fontWeight: 400, fontStyle: 'normal' }}>
+            <p className="mt-5 text-[15px] leading-[1.7]" style={{ color: 'rgba(247,241,230,0.75)', fontWeight: 400, fontStyle: 'normal' }}>
               LUMEAHAIRGH Hair Studio started in a small room in East Legon with one mission to make every woman feel like royalty. Today we craft luxury wigs and braids for queens across Ghana and beyond. Our hands are skilled, our heart is pure, our quality is unmatched.
             </p>
             <div className="mt-7 space-y-5">
-              <div><h3 className="text-[16px]">Luxury First</h3><p className="mt-1 text-[13px]" style={{ color: 'var(--muted)', fontWeight: 400, fontStyle: 'normal' }}>Only human hair, premium lace and a flawless melt.</p></div>
-              <div><h3 className="text-[16px]">Queens Only</h3><p className="mt-1 text-[13px]" style={{ color: 'var(--muted)', fontWeight: 400, fontStyle: 'normal' }}>We serve women who know quality and love the soft life.</p></div>
+              <div><h3 className="text-[16px]">Luxury First</h3><p className="mt-1 text-[13px]" style={{ color: 'rgba(247,241,230,0.75)', fontWeight: 400, fontStyle: 'normal' }}>Only human hair, premium lace and a flawless melt.</p></div>
+              <div><h3 className="text-[16px]">Queens Only</h3><p className="mt-1 text-[13px]" style={{ color: 'rgba(247,241,230,0.75)', fontWeight: 400, fontStyle: 'normal' }}>We serve women who know quality and love the soft life.</p></div>
             </div>
             <Link to="/about" className="mt-7 btn-3d px-8 py-4 rounded-full glass text-[11px] tracking-[0.15em] uppercase min-h-[48px] inline-flex items-center">
               Our Full Story →
@@ -220,7 +222,7 @@ export default function Home() {
                 Real stories from Accra queens who found luxury at LUMEAHAIRGH.
               </p>
             </div>
-            <Link to="/stories" className="mt-6 px-6 py-3 rounded-full bg-black text-white text-[11px] tracking-[0.15em] uppercase min-h-[44px] inline-flex items-center justify-center">
+            <Link to="/stories" className="mt-6 px-6 py-3 rounded-full bg-forestDeep text-white text-[11px] tracking-[0.15em] uppercase min-h-[44px] inline-flex items-center justify-center">
               Watch Stories →
             </Link>
           </div>
@@ -236,14 +238,14 @@ export default function Home() {
         </section>
 
         <section className="mt-16 lg:mt-28">
-          <div className="photo-cta relative overflow-hidden rounded-[30px] p-7 md:p-12 lg:p-16 text-white">
+          <div className="photo-cta relative overflow-hidden rounded-[30px] bg-forestDeep p-7 md:p-12 lg:p-16 text-white">
             <div className="relative z-10 max-w-[640px]">
               <div className="inline-flex rounded-full px-4 py-1.5 text-[10px] tracking-[0.2em] uppercase bg-white/15">Ready To Slay</div>
               <h2 className="text-[30px] lg:text-[48px] leading-[0.9] mt-3 max-w-[520px]">Book Your Luxury Session Now</h2>
               <p className="mt-4 text-[14px] leading-[1.6]" style={{ fontWeight: 400, fontStyle: 'normal' }}>
                 Tell us your dream look and we will make it happen.
               </p>
-              <Link to="/booking" className="mt-6 px-10 py-5 rounded-full bg-white text-[12px] tracking-[0.15em] uppercase text-black min-h-[56px] btn-3d inline-flex items-center justify-center">
+              <Link to="/booking" className="mt-6 px-10 py-5 rounded-full bg-gold text-[12px] tracking-[0.15em] uppercase text-white min-h-[56px] btn-3d inline-flex items-center justify-center">
                 Book Appointment →
               </Link>
               <p className="mt-5 text-[10px] tracking-[0.15em] uppercase opacity-80">East Legon Open Daily</p>
@@ -255,21 +257,21 @@ export default function Home() {
       </div>
 
       {activeStory && (
-        <div className="fixed inset-0 z-[60] bg-black/80 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label={`${activeStory.name} story`}>
-          <div className="relative w-full max-w-md rounded-[24px] bg-[#F7F1E6] p-2">
+        <div className="fixed inset-0 z-[60] bg-forestDeep/80 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label={`${activeStory.name} story`}>
+          <div className="relative w-full max-w-md rounded-[24px] bg-beige p-2">
             <div className="flex gap-1 p-2">
               {testimonials.map((story) => <div key={story.name} className={`h-1 flex-1 rounded-full ${story.name === activeStory.name ? 'bg-[var(--gold)]' : 'bg-black/20'}`} />)}
             </div>
-            <div className="bg-white rounded-[20px] p-8 min-h-96 flex flex-col justify-center text-center">
+            <div className="bg-ivory rounded-[20px] p-8 min-h-96 flex flex-col justify-center text-center">
               <img src={activeStory.image} alt={activeStory.name} className="mx-auto h-24 w-24 rounded-full object-cover" />
               <p className="mt-6 text-xl leading-relaxed">“{activeStory.quote}”</p>
               <p className="mt-4 font-bold text-gold">{activeStory.name}</p>
               <div className="mt-8 flex justify-between">
-                <button type="button" onClick={() => setActiveStory(testimonials[(testimonials.indexOf(activeStory) + testimonials.length - 1) % testimonials.length])} className="px-6 py-3 rounded-full bg-charcoal text-beige">Previous</button>
+                <button type="button" onClick={() => setActiveStory(testimonials[(testimonials.indexOf(activeStory) + testimonials.length - 1) % testimonials.length])} className="px-6 py-3 rounded-full bg-forestDeep text-beige">Previous</button>
                 <button type="button" onClick={() => setActiveStory(testimonials[(testimonials.indexOf(activeStory) + 1) % testimonials.length])} className="px-6 py-3 rounded-full bg-gold text-white">Next</button>
               </div>
             </div>
-            <button type="button" onClick={() => setActiveStory(null)} aria-label="Close story" className="absolute top-4 right-4 w-11 h-11 rounded-full bg-charcoal text-beige">×</button>
+            <button type="button" onClick={() => setActiveStory(null)} aria-label="Close story" className="absolute top-4 right-4 w-11 h-11 rounded-full bg-forestDeep text-beige">×</button>
           </div>
         </div>
       )}
